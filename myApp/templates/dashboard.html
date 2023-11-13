@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+      <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+<script type="module" src="pyscript.js"></script>
+        <title> Labor Force Survey</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="icon" type="png" href="t.png"/>
+        <style>
+            body
+{
+    background-color: black;
+}
+
+.top-part{
+    background-color: rgb(0, 91, 128);
+    color: rgb(255, 255, 255);
+    width: 99.8%;
+    text-align: center;
+    padding: 1px 0px 1px 0px;
+    font-style: italic;
+}
+
+.left-div{
+    background-color: rgb(45, 45, 53);
+    color: white;
+    height: 81%;
+    display: inline-block;
+    padding: 30px;
+    font-size: 18px;
+    padding-top: 0px;
+    margin-top: 4px;
+}
+
+.right-divs{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 260px;
+    height: 80px;
+    display: inline-block;
+    padding: 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 15px;
+    margin-left: 84px;
+    cursor: pointer;
+}
+
+text{
+    font-weight: bolder;
+    font-style: italic;
+    color: rgb(0, 91, 128);
+}
+
+chart{
+color: rgb(0, 91, 128);
+font-weight: bolder;
+font-size: 50px;;
+}
+
+.body-div{
+    color: rgb(0, 0, 0);
+
+}
+
+.active{
+    background-color: rgb(0, 91, 128);
+}
+
+
+p{
+    margin-top: 0px;
+    width: 100%;
+    margin-left: -30px;
+    padding: 15 17 15 43px;
+   
+}
+p .a{
+  text-decolartion:none;
+}
+
+
+p:hover{
+    background-color: rgb(0, 91, 128);
+    cursor: pointer;
+}
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+   
+    color:white;
+  }
+
+  th {
+    background-color: black;
+    
+  }
+  canvas {
+    display: block;
+    margin: auto;
+    display: block;
+            margin: auto;
+            width: 80%; 
+            height: auto; 
+            max-width: 800px; 
+}
+
+        </style>
+    </head>
+    <body>
+
+      <py-script>
+        print("Welcome")
+      </py-script>
+        <div class="top-part"><h1>Labor Force Survey</h1></div>
+
+        <div style="color: white;" class="left-div" width="50" height="400">
+            <p style="margin-top: 20px;" class="active">Dashboard</p>
+            
+           <p>  <a href="hom.html" style="color:white";>Kigali City</a></p>
+           <p>  <a href="hom.html" style="color:white";>south province </a></p>
+           <p>  <a href="hom.html" style="color:white";>West province </a></p>
+           <p>  <a href="hom.html" style="color:white";>North province </a></p>
+           <p>  <a href="hom.html" style="color:white";>East province </a></p>
+
+          
+        </div>
+        <br><br>  <br><br>  <br><br>  <br><br>  
+        <div style="margin-top: -490px; margin-left: 140px;">
+          <center> <h1 style="color:white;">Employed</h1></center>
+        <div style="background-color: rgb(161, 225, 255);" class="right-divs" id="hover">
+        <text>Total employed in the City of Kigali: </text>
+        <br>
+        <center><chart>647,629</chart></center>
+        </div>
+
+        <div style="background-color: rgb(90, 90, 90);" class="right-divs">
+            <text style="color: white;">Total employed in South Province: </text>
+            <br>
+            <center><chart style="color: white;">811,479</chart></center>
+            </div>
+        
+            
+            <div style="background-color: rgb(71, 0, 50);" class="right-divs">
+                <text style="color: rgb(255, 255, 255);">Total employed in West Province: </text>
+                <br>
+                <center><chart style="color: white;">650,043</chart></center>
+                </div>
+
+                <div style="height: 60px;"></div> 
+
+                <div style="background-color: rgb(61, 61, 252);" class="right-divs">
+                    <text style="color: white;">Total employed in North Province: </text>
+                    <br>
+                    <center><chart style="color: white;">599,887</chart></center>
+                    </div>
+            
+                    <div style="background-color: orange;" class="right-divs">
+                        <text>Total employed in East Province: </text>
+                        <br>
+                        <center><chart>837,313</chart></center>
+                        </div>
+                    
+                        <center> <h1 style="color:white;">Unemployed</h1></center>
+                        <div style="background-color: gold;" class="right-divs">
+                            <text>Total unemployed in the City of Kigali: </text>
+                            <br>
+                            <center><chart>171,084</chart></center>
+                            </div>
+
+                            <div style="height: 60px;"></div> 
+
+                <div style="background-color: red;" class="right-divs">
+                    <text style="color: white;">total unemployed in South Province: </text>
+                    <br>
+                    <center><chart style="color: white;">222,851</chart></center>
+                    </div>
+            
+                    <div style="background-color: green;" class="right-divs" id="hover">
+                        <text style="color: white;">Total unemployed in West Province: </text>
+                        <br>
+                        <center><chart style="color: white;">170,937</chart></center>
+                        </div>
+                    
+                        
+                        <div style="color: red;" class="right-divs">
+                            <text>Total unemployed in North Province: </text>
+                            <br>
+                            <center><chart>154,168</chart></center>
+                            </div>
+                            <br>  <br>  <br>
+                            <div style="color: white;" class="right-divs">
+                                <text>Total unemployed in East Province: </text>
+                                <br>
+                                <center><chart>197,904</chart></center>
+                                </div>
+                              <center>  <h1 style="color:white;">Outside labour force:</h1></center>
+                                <div style="background-color: blue;" class="right-divs">
+                                    <text style="color: white;">Total outside the labour force in the City of Kigali:  </text>
+                                    <br>
+                                    <center><chart style="color: white;">398,068 </chart></center>
+                                    </div>
+                                    <div style="color: white;" class="right-divs">
+                                        <text>Total outside the labour force in South Province: </text>
+                                        <br>
+                                        <center><chart>956,483</chart></center>
+                                        </div>
+                                        <br><br>
+                                        <div style="background-color: green;" class="right-divs">
+                                            <text style="color: white;">Total outside the labour force in North Province: </text>
+                                            <br>
+                                            
+                                            <center><chart style="color: white;">586,854</chart></center>
+                                            
+                                            </div>
+                                            <div  style="background-color: red;" class="right-divs">
+                                                <text style="color: white;">Total outside the labour force in West Province: </text>
+                                                <br>
+                                                
+                                                <center><chart style="color: white;"> 697,402</chart></center>
+                                            </div>
+                                            <div  style="background-color:blue;" class="right-divs">
+                                                <text style="color: white;">Total outside the labour force in East Province: </text>
+                                                <br>
+                                                
+                                                <center><chart style="color: white;"> 861,483</chart></center>
+                                            </div>
+                                        </div>
+                                       
+                                         
+
+            
+                
+                            </div>
+                            <br> <br> <br>
+<center>
+ 
+                   <br><br>     <br><br>   
+                </center>
+            </div>
+
+            <canvas id="myHistogram"></canvas>
+
+            <script>
+                // Data from your provided numbers
+                const provinces = ["City of Kigali", "South Province", "West Province", "North Province", "East Province"];
+                const participationRates = [67.3, 52, 54.1, 56.2, 54.6];
+        
+                // Chart.js
+                var ctx = document.getElementById('myHistogram').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: provinces,
+                        datasets: [{
+                            label: 'Labour Force Participation Rate',
+                            data: participationRates,
+                            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 3
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>                  
+            <button><a href="edge://downloads/all">PDF</a></button>      <button><a href="teedge://downloads/all">excel</a></button> 
+            <button><a href="edge://downloads/all">print</a></button>
+    <table>
+        <tr>
+          <th>Region</th>
+          <th>Employed</th>
+          <th>Unemployed</th>
+          <th>Outside Labour Force</th>
+          <th>Labour Force Participation Rate</th>
+          <th>Employment-to-Population Ratio</th>
+          <th>Unemployment Rate</th>
+          <th>Combined Rate of Unemployment and Time-Related Underemployment</th>
+          <th>Combined Rate of Unemployment and Potential Labour Force</th>
+          <th>Composite Measure of Labour Underutilization</th>
+        </tr>
+        <tr>
+          <td>City of Kigali</td>
+          <td>647,629</td>
+          <td>171,084</td>
+          <td>398,068</td>
+          <td>67.3</td>
+          <td>53.2</td>
+          <td>20.9</td>
+          <td>34.7</td>
+          <td>32.4</td>
+          <td>44.2</td>
+        </tr>
+        <tr>
+          <td>Nyarugenge</td>
+          <td>155,687</td>
+          <td>40,232</td>
+          <td>99,870</td>
+          <td>66.2</td>
+          <td>52.6</td>
+          <td>20.5</td>
+          <td>34.2</td>
+          <td>33.2</td>
+          <td>44.7</td>
+        </tr>
+        <tr>
+          <td>Gasabo</td>
+          <td>292,464</td>
+          <td>78,762</td>
+          <td>184,387</td>
+          <td>66.8</td>
+          <td>52.6</td>
+          <td>21.2</td>
+          <td>36</td>
+          <td>32.8</td>
+          <td>45.4</td>
+        </tr>
+        <tr>
+          <td>Kicukiro</td>
+          <td>199,478</td>
+          <td>52,090</td>
+          <td>113,810</td>
+          <td>68.9</td>
+          <td>54.6</td>
+          <td>20.7</td>
+          <td>33.1</td>
+          <td>31.3</td>
+          <td>42</td>
+        </tr>
+        <tr>
+          <td>South Province</td>
+          <td>811,479</td>
+          <td>222,851</td>
+          <td>956,483</td>
+          <td>52</td>
+          <td>40.8</td>
+          <td>21.5</td>
+          <td>49.7</td>
+          <td>40.7</td>
+          <td>62</td>
+        </tr>
+        <tr>
+          <td>Nyanza</td>
+          <td>90,187</td>
+          <td>24,406</td>
+          <td>117,332</td>
+          <td>49.4</td>
+          <td>38.9</td>
+          <td>21.3</td>
+          <td>48.6</td>
+          <td>43.4</td>
+          <td>63.1</td>
+        </tr>
+        <tr>
+          <td>Gisagara</td>
+          <td>93,130</td>
+          <td>24,542</td>
+          <td>100,154</td>
+          <td>54</td>
+          <td>42.8</td>
+          <td>20.9</td>
+          <td>50.3</td>
+          <td>36.3</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td>Nyaruguru</td>
+          <td>84,801</td>
+          <td>23,747</td>
+          <td>139,515</td>
+          <td>43.8</td>
+          <td>34.2</td>
+          <td>21.9</td>
+          <td>55</td>
+          <td>46</td>
+          <td>68.9</td>
+        </tr>
+        <tr>
+          <td>Huye</td>
+          <td>112,779</td>
+          <td>27,643</td>
+          <td>102,916</td>
+          <td>57.7</td>
+          <td>46.3</td>
+          <td>19.7</td>
+          <td>35.9</td>
+          <td>37.1</td>
+          <td>49.8</td>
+        </tr>
+        <tr>
+          <td>Nyamagabe</td>
+          <td>107,077</td>
+          <td>30,001</td>
+          <td>124,909</td>
+          <td>52.3</td>
+          <td>40.9</td>
+          <td>21.9</td>
+          <td>56.9</td>
+          <td>37.2</td>
+          <td>65.4</td>
+        </tr>
+        <tr>
+          <td>Ruhango</td>
+          <td>113,408</td>
+          <td>29,311</td>
+          <td>135,662</td>
+          <td>51.3</td>
+          <td>40.7</td>
+          <td>20.5</td>
+          <td>52.8</td>
+          <td>39.9</td>
+          <td>64.3</td>
+        </tr>
+        <tr>
+          <td>Muhanga</td>
+          <td>108,598</td>
+          <td>34,385</td>
+          <td>114,940</td>
+          <td>55.4</td>
+          <td>42.1</td>
+          <td>24</td>
+          <td>46.7</td>
+          <td>43.7</td>
+          <td>60.5</td>
+        </tr>
+        <tr>
+          <td>Kamonyi</td>
+          <td>101,499</td>
+          <td>28,817</td>
+          <td>121,055</td>
+          <td>51.8</td>
+          <td>40.4</td>
+          <td>22.1</td>
+          <td>53.3</td>
+          <td>41.5</td>
+          <td>64.9</td>
+        </tr>
+        <tr>
+          <td>West Province</td>
+          <td>650,043</td>
+          <td>170,937</td>
+          <td>697,402</td>
+          <td>54.1</td>
+          <td>42.8</td>
+          <td>20.8</td>
+          <td>47.8</td>
+          <td>38.9</td>
+          <td>59.7</td>
+        </tr>
+        <tr>
+          <td>Karongi</td>
+          <td>102,608</td>
+          <td>30,047</td>
+          <td>126,220</td>
+          <td>51.2</td>
+          <td>39.6</td>
+          <td>22.7</td>
+          <td>45.9</td>
+          <td>38.1</td>
+          <td>56.7</td>
+        </tr>
+        <tr>
+          <td>Rutsiro</td>
+          <td>92,073</td>
+          <td>22,933</td>
+          <td>92,949</td>
+          <td>55.3</td>
+          <td>44.3</td>
+          <td>19.9</td>
+          <td>54.3</td>
+          <td>36.9</td>
+          <td>64</td>
+        </tr>
+        <tr>
+          <td>Rubavu</td>
+          <td>119,900</td>
+          <td>29,533</td>
+          <td>96,000</td>
+          <td>60.9</td>
+          <td>48.9</td>
+          <td>19.8</td>
+          <td>37.2</td>
+          <td>32.3</td>
+          <td>47</td>
+        </tr>
+        <tr>
+          <td>Nyabihu</td>
+          <td>94,554</td>
+          <td>22,289</td>
+          <td>83,176</td>
+          <td>58.4</td>
+          <td>47.3</td>
+          <td>19.1</td>
+          <td>50.5</td>
+          <td>35</td>
+          <td>60.2</td>
+        </tr>
+        <tr>
+          <td>Ngororero</td>
+          <td>82,937</td>
+          <td>17,682</td>
+          <td>77,374</td>
+          <td>56.5</td>
+          <td>46.6</td>
+          <td>17.6</td>
+          <td>49.6</td>
+          <td>39.2</td>
+          <td>62.8</td>
+        </tr>
+        <tr>
+          <td>Rusizi</td>
+          <td>96,035</td>
+          <td>26,898</td>
+          <td>121,156</td>
+          <td>50.4</td>
+          <td>39.3</td>
+          <td>21.9</td>
+          <td>46.2</td>
+          <td>43</td>
+          <td>60.7</td>
+        </tr>
+        <tr>
+          <td>Nyamasheke</td>
+          <td>61,936</td>
+          <td>21,556</td>
+          <td>100,527</td>
+          <td>45.4</td>
+          <td>33.7</td>
+          <td>25.8</td>
+          <td>57.3</td>
+          <td>50.5</td>
+          <td>71.5</td>
+        </tr>
+        <tr>
+          <td>North Province</td>
+          <td>599,887</td>
+          <td>154,168</td>
+          <td>586,854</td>
+          <td>56.2</td>
+          <td>44.7</td>
+          <td>20.4</td>
+          <td>48</td>
+          <td>38.5</td>
+          <td>59.8</td>
+        </tr>
+        <tr>
+          <td>Rulindo</td>
+          <td>92,054</td>
+          <td>27,777</td>
+          <td>99,477</td>
+          <td>54.6</td>
+          <td>42</td>
+          <td>23.2</td>
+          <td>51.2</td>
+          <td>42.1</td>
+          <td>63.3</td>
+        </tr>
+        <tr>
+          <td>Gakenke</td>
+          <td>120,170</td>
+          <td>24,370</td>
+          <td>134,503</td>
+          <td>51.8</td>
+          <td>43.1</td>
+          <td>16.9</td>
+          <td>39.1</td>
+          <td>37.9</td>
+          <td>54.5</td>
+        </tr>
+        <tr>
+          <td>Musanze</td>
+          <td>156,766</td>
+          <td>36,034</td>
+          <td>125,298</td>
+          <td>60.6</td>
+          <td>49.3</td>
+          <td>18.7</td>
+          <td>45.7</td>
+          <td>33.6</td>
+          <td>55.7</td>
+        </tr>
+        <tr>
+          <td>Burera</td>
+          <td>94,997</td>
+          <td>30,532</td>
+          <td>86,504</td>
+          <td>59.2</td>
+          <td>44.8</td>
+          <td>24.3</td>
+          <td>58.5</td>
+          <td>39.5</td>
+          <td>66.8</td>
+        </tr>
+        <tr>
+            <td>Gicumbi</td>
+            <td>135,900</td>
+            <td>35,455</td>
+            <td>141,072</td>
+            <td>54.8</td>
+            <td>43.5</td>
+            <td>20.7</td>
+            <td>48.3</td>
+            <td>40.8</td>
+            <td>61.4</td>
+          </tr>
+          <tr>
+            <td>East province</td>
+            <td>837,313</td>
+            <td>197,904</td>
+            <td>861,483</td>
+            <td>54.6</td>
+            <td>44.1</td>
+            <td>19.1</td>
+            <td>47.3</td>
+            <td>37.7</td>
+            <td>59.4</td>
+          </tr>
+          <tr>
+            <td>Rwamagana</td>
+            <td>123,759</td>
+            <td>30,188</td>
+            <td>131,172</td>
+            <td>54</td>
+            <td>43.4</td>
+            <td>19.6</td>
+            <td>43.7</td>
+            <td>37.5</td>
+            <td>56.2</td>
+          </tr>
+          <tr>
+            <td>Nyagatare</td>
+            <td>136,485</td>
+            <td>32,707</td>
+            <td>148,586</td>
+            <td>53.2</td>
+            <td>42.9</td>
+            <td>19.3</td>
+            <td>50.8</td>
+            <td>40</td>
+            <td>63.4</td>
+          </tr>
+          <tr>
+            <td>Gatsibo</td>
+            <td>145,820</td>
+            <td>42,392</td>
+            <td>125,323</td>
+            <td>60</td>
+            <td>46.5</td>
+            <td>22.5</td>
+            <td>50.9</td>
+            <td>38</td>
+            <td>60.7</td>
+          </tr>
+          <tr>
+            <td>Kayonza</td>
+            <td>131,666</td>
+            <td>24,914</td>
+            <td>159,255</td>
+            <td>49.6</td>
+            <td>41.7</td>
+            <td>15.9</td>
+            <td>35.4</td>
+            <td>36.3</td>
+            <td>51.1</td>
+          </tr>
+          <tr>
+            <td>Kirehe</td>
+            <td>102,948</td>
+            <td>19,706</td>
+            <td>109,528</td>
+            <td>52.8</td>
+            <td>44.3</td>
+            <td>16.1</td>
+            <td>62.6</td>
+            <td>38.6</td>
+            <td>72.7</td>
+          </tr>
+          <tr>
+            <td>Ngoma</td>
+            <td>104,590</td>
+            <td>19,372</td>
+            <td>85,737</td>
+            <td>59.1</td>
+            <td>49.9</td>
+            <td>15.6</td>
+            <td>43.7</td>
+            <td>32.2</td>
+            <td>54.7</td>
+          </tr>
+          <tr>
+            <td>Bugesera</td>
+            <td>92,044</td>
+            <td>28,625</td>
+            <td>101,882</td>
+            <td>54.2</td>
+            <td>41.4</td>
+            <td>23.7</td>
+            <td>44.8</td>
+            <td>40.6</td>
+            <td>57</td>
+          </tr>
+        </table>
+      
+                      
+    </body>
+</html>

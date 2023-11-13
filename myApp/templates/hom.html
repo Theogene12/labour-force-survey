@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <title>Labor Force Survey</title>
+     
+        <style>
+            body
+{
+    background-color: black;
+}
+
+.top-part{
+    background-color: rgb(0, 91, 128);
+    color: rgb(255, 255, 255);
+    width: 99.8%;
+    text-align: center;
+    padding: 1px 0px 1px 0px;
+    font-style: italic;
+}
+
+.left-div{
+    background-color: rgb(45, 45, 53);
+    color: white;
+    height: 81%;
+    display: inline-block;
+    padding: 30px;
+    font-size: 18px;
+    padding-top: 0px;
+    margin-top: 4px;
+}
+
+.right-divs{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 260px;
+    height: 80px;
+    display: inline-block;
+    padding: 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 15px;
+    margin-left: 84px;
+    cursor: pointer;
+}
+
+text{
+    font-weight: bolder;
+    font-style: italic;
+    color: rgb(0, 91, 128);
+}
+
+chart{
+color: rgb(0, 91, 128);
+font-weight: bolder;
+font-size: 50px;;
+}
+
+.body-div{
+    color: rgb(0, 0, 0);
+
+}
+
+.active{
+    background-color: rgb(0, 91, 128);
+}
+
+
+p{
+    margin-top: 0px;
+    width: 100%;
+    margin-left: -30px;
+    padding: 15 17 15 43px;
+}
+
+p:hover{
+    background-color: rgb(0, 91, 128);
+    cursor: pointer;
+}
+
+.chart-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+
+}
+
+
+        </style>
+    </head>
+    <body>
+        <div class="top-part"><h1>Labor Force Survey</h1></div>
+
+        <div style="color: white;" class="left-div">
+            <p style="margin-top: 20px;" class="active" ><a href="dashboard.html" style="color:white">Dashboard</a></p>
+            <p>  <a href="hom.html" style="color:white";><a href="nyarugenge.html" style="color:white">Nyarugenge</a></p>
+            <p>  <a href="hom.html" style="color:white";><a href="Gasabo.html" style="color:white">Gasabo </a></p>
+            <p>  <a href="hom.html" style="color:white";><a href="kicukiro.html" style="color:white">Kicukiro</a></p>
+            
+          
+        </div>
+        <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>    <br><br>  <br><br>  
+        <div style="margin-top: -490px; margin-left: 140px;">
+          <center>
+          <h1 style="color:white">A District-Level Analysis</h1><br> 
+        <p style="color:white"> 
+          
+
+          Introduction:<br><br>
+          
+          Rwanda, a country nestled in the heart of East Africa, has been 
+          experiencing dynamic economic growth and societal transformation.
+           As we delve into the labor force indicators of different districts in the
+            Rwanda Labour Force Survey <b>(RLFS) </b>of 2022, one of the most crucial 
+            aspects to explore is the City of Kigali and its constituent districts,
+             namely Nyarugenge, Gasabo, and Kicukiro. These districts not only serve as 
+             economic hubs but also reflect the diverse employment landscapes and challenges 
+             faced by the Rwandan workforce.<br><br>
+          
+          <h3 style="color:gold">District-Level Overview:
+          City of Kigali:
+          <p style="color:white">
+          The bustling metropolis of Kigali, the capital and largest city of Rwanda, stands
+           as the economic epicenter of the nation. With a staggering
+            employed population of 647,629, the city showcases a high
+             labor force participation rate of 67.3%. However, a closer
+              look reveals challenges, with a composite measure of labor
+               underutilization (LU4) at 44.2%, emphasizing the need for 
+               a nuanced understanding of employment dynamics in this vibrant city.</p>
+          
+               <h3 style="color:gold"> Nyarugenge:<br><br>
+                <p style="color:white">
+          Within the City of Kigali, Nyarugenge emerges as a district with distinctive labor force characteristics. Employing 155,687 individuals, Nyarugenge boasts a labor force participation rate of 66.2%. Nevertheless, the unemployment rate (LU1) of 20.5% and a composite measure of labor underutilization (LU4) at 44.7% underscore the complexity of labor dynamics and the need for targeted interventions.
+        </p>
+        <h3 style="color:gold"> Gasabo:<br><br>
+          <p style="color:white">
+          Adjacent to Nyarugenge, Gasabo is another significant district contributing to Kigali's economic vitality. Hosting 292,464 employed individuals, Gasabo exhibits a labor force participation rate of 66.8%. However, challenges persist, with a composite measure of labor underutilization (LU4) standing at 45.4%, signaling the importance of holistic approaches to enhance employment opportunities.
+        </p>
+          <h3 style="color:gold"> kicukiro:
+            <p style="color:white">
+          Completing the trio of districts within the City of Kigali, Kicukiro presents its own set of labor force dynamics. With a robust employment-to-population ratio of 54.6%, Kicukiro leads in this metric among the discussed districts. Despite this, an unemployment rate (LU1) of 20.7% and a composite measure of labor underutilization (LU4) at 42% highlight the need for targeted strategies to address unemployment and underemployment challenges.
+        </p>
+
+        <h3 style="color:gold">  Conclusion:<br><br>
+            <p style="color:white">
+          
+          
+              As we navigate through the labor force indicators of
+               the City of Kigali and its constituent districts, 
+               it becomes evident that the quest for inclusive and
+                sustainable employment remains a key focus. Understanding
+                 the nuances of each district's labor market is essential 
+                 for policymakers, researchers, and community leaders to formulate targeted interventions 
+                 that propel Rwanda towards a more equitable and prosperous future. </p><br><br></p>
+        </center>
+        <div class="chart-container">
+          <canvas id="myHistogram"></canvas>
+      </div>
+        <script>
+          
+          const cities = ["City of Kigali", "Nyarugenge", "Gasabo", "Kicukiro"];
+          const participationRates = [67.3, 66.2, 66.8, 68.9];
+  
+  
+          const backgroundColors = ['rgba(75, 192, 192, 0.7)', 'rgba(255, 99, 132, 0.7)', 'rgba(255, 205, 86, 0.7)', 'rgba(54, 162, 235, 0.7)'];
+  
+         
+          var ctx = document.getElementById('myHistogram').getContext('2d');
+          var myChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: cities,
+                  datasets: [{
+                      label: 'Labour Force Participation Rate',
+                      data: participationRates,
+                      backgroundColor: backgroundColors,
+                      borderColor: 'rgba(255, 255, 255, 1)', 
+                      borderWidth: 6
+                  }]
+              },
+              options: {
+                  scales: {
+                      y: {
+                          beginAtZero: true,
+                          max: 100
+                      }
+                  }
+              }
+          });
+      </script>
+    </body>
+</html>
